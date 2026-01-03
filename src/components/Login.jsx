@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
@@ -44,7 +45,7 @@ const Login = () => {
         </form>
 
         <p className="text-center mt-3 mb-0">
-          Don’t have an account? <a href="#">Sign up</a>
+          Don’t have an account? <Link to="/signup">Sign up</Link>
         </p>
       </div>
     </div>
