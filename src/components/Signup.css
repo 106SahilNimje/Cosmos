@@ -1,0 +1,24 @@
+.signup-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+}
+
+.signup-title {
+  font-weight: 600;
+  text-align: center;
+}
+
+.signup-btn {
+  background-color: #185a9d;
+  border: none;
+}
+
+.signup-btn:hover {
+  background-color: #144d86;
+}

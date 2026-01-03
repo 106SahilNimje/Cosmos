@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -6,30 +7,46 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    console.log({ email, password });
   };
 
   return (
-    <div style={{ padding: 40 }}>
-      <h2>Login</h2>
+    <div className="login-container d-flex justify-content-center align-items-center">
+      <div className="card login-card shadow p-4">
+        <h3 className="login-title mb-4">Login</h3>
 
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <br /><br />
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label className="form-label">Email</label>
+            <input
+              type="email"
+              className="form-control"
+              placeholder="Enter email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <br /><br />
+          <div className="mb-3">
+            <label className="form-label">Password</label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Enter password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
 
-      <button onClick={handleSubmit}>Login</button>
+          <button className="btn btn-primary w-100 login-btn">
+            Login
+          </button>
+        </form>
+
+        <p className="text-center mt-3 mb-0">
+          Don’t have an account? <a href="#">Sign up</a>
+        </p>
+      </div>
     </div>
   );
 };
